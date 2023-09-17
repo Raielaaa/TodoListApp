@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.todolistapp.vvm.dashboard.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_dashboard_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+        <action
+            android:id="@+id/action_navigation_home_to_homeAddBottomSheetFragment"
+            app:destination="@id/homeAddBottomSheetFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_account_navigation"
+            app:destination="@id/account_navigation" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.todolistapp.vvm.dashboard.ui.add.AddTodoFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard_add_todo" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/homeAddBottomSheetFragment"
+        android:name="com.example.todolistapp.vvm.dashboard.ui.home.HomeAddBottomSheetFragment"
+        android:label="fragment_dashboard_add_bottom_sheet"
+        tools:layout="@layout/fragment_dashboard_add_bottom_sheet" >
+        <action
+            android:id="@+id/action_homeAddBottomSheetFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </dialog>
+    <include app:graph="@navigation/account_navigation" />
+</navigation>

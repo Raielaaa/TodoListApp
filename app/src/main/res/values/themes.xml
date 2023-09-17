@@ -1,0 +1,63 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+<!--    <style name="Base.Theme.TodoListApp" parent="Theme.Material3.DayNight.NoActionBar">-->
+    <style name="Base.Theme.TodoListApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:colorPrimaryDark">#f7f7f7</item>
+        <item name="colorPrimary">@color/themeColor.red</item>
+    </style>
+
+    <style name="checkBoxStyle" parent="Base.Theme.AppCompat">
+        <item name="colorAccent">@color/themeColor.red</item>
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+
+    <style name="Theme.TodoListApp" parent="Base.Theme.TodoListApp" />
+
+    <style name="ImageView.Corner" parent="">
+        <item name="cornerSizeTopRight">20dp</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeBottomLeft">20dp</item>
+        <item name="cornerSizeBottomRight">20dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="ImageView.Corner.BG" parent="">
+        <item name="cornerSizeBottomRight">30dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="CustomCardCorners" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance_custom_corners</item>
+    </style>
+
+    <style name="ShapeAppearance_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">30dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <style name="CustomCardCornersAdd" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance_custom_corners_add</item>
+    </style>
+
+    <style name="ShapeAppearance_custom_corners_add" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">30dp</item>
+    </style>
+
+    <style name="CustomDatePickerDialog" parent="Theme.MaterialComponents.Light.Dialog">
+        <!-- Customize the colorAccent to change the theme color -->
+        <item name="colorAccent">@color/themeColor.red</item>
+        <item name="colorOnPrimary">@color/themeColor.red</item>
+    </style>
+
+
+</resources>
